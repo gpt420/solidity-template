@@ -1,0 +1,43 @@
+{
+  "name": "gpt420-project",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "solhint:check": "npx solhint 'contracts/**/*.sol'",
+    "solhint:fix": "npx solhint 'contracts/**/*.sol' --fix",
+    "prettier:check": "npx prettier -c **/*.{js,ts,md,sol,json,yml,yaml}",
+    "prettier:fix": "npx prettier -w **/*.{js,ts,md,sol,json,yml,yaml}",
+    "lint:check": "pnpm prettier:check && pnpm solhint:check",
+    "lint:fix": "pnpm prettier:fix && pnpm solhint:fix ",
+    "test:hh": "npx hardhat test",
+    "clean": "npx hardhat clean && forge clean",
+    "accounts": "npx hardhat accounts",
+    "balances": "npx hardhat balances"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@nomicfoundation/hardhat-viem": "^1.0.2",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.11",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.7",
+    "chai": "^4.4.0",
+    "ethers": "^6.9.2",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^3.1.1",
+    "prettier-plugin-solidity": "^1.3.1",
+    "solhint": "^4.0.0",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "~5.0.4",
+    "viem": "^1.21.4"
+  }
+}

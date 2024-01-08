@@ -1,0 +1,10 @@
+node_modules
+lib
+cache-forge
+cache-hardhat
+typechain-types
+coverage
+deployments
+bin
+out
+*lock.yaml
